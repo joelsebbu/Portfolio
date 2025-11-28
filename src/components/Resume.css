@@ -1,0 +1,123 @@
+.resume {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: var(--color-bg);
+  text-align: center;
+}
+
+.resume-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.resume h2 {
+  color: var(--color-bg);
+  margin-bottom: 1rem;
+}
+
+.resume-description {
+  color: var(--color-bg);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.download-btn,
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  border: 2px solid var(--color-bg);
+}
+
+.download-btn:hover {
+  background-color: transparent;
+  color: var(--color-bg);
+  border-color: var(--color-bg);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn {
+  background-color: transparent;
+  color: var(--color-bg);
+  border: 2px solid var(--color-bg);
+}
+
+.contact-btn:hover {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(255, 255, 254, 0.3);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-bg);
+}
+
+.contact-item svg {
+  flex-shrink: 0;
+}
+
+.contact-item a {
+  color: var(--color-bg);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.contact-item a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .resume-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .download-btn,
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-info {
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
+}
