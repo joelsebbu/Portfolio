@@ -68,7 +68,7 @@
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(255, 137, 6, 0.2);
+  box-shadow: 0 10px 40px rgba(255, 142, 60, 0.2);
   transition: transform 0.3s ease;
 }
 

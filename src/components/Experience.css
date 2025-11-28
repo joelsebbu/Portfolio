@@ -51,7 +51,7 @@
 
 .timeline-content:hover {
   transform: translateX(10px);
-  box-shadow: 0 8px 30px rgba(255, 137, 6, 0.15);
+  box-shadow: 0 8px 30px rgba(255, 142, 60, 0.15);
   border-color: var(--color-link);
 }
 

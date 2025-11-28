@@ -32,7 +32,7 @@
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(255, 137, 6, 0.2);
+  box-shadow: 0 15px 40px rgba(255, 142, 60, 0.2);
   border-color: var(--color-link);
 }
 
@@ -77,7 +77,7 @@
 }
 
 .tag {
-  background-color: rgba(255, 137, 6, 0.1);
+  background-color: rgba(255, 142, 60, 0.1);
   color: var(--color-link);
   padding: 0.4rem 0.8rem;
   border-radius: 6px;

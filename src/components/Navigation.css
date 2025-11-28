@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 254, 0.95);
+  background-color: rgba(239, 240, 243, 0.95);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
@@ -12,7 +12,7 @@
 
 .navigation.scrolled {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(15, 14, 23, 0.1);
+  border-bottom: 1px solid rgba(13, 13, 13, 0.1);
 }
 
 .nav-container {
