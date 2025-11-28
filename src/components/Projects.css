@@ -37,7 +37,7 @@
 }
 
 .project-image {
-  background: var(--color-link);
+  background: rgba(255, 142, 60, 0.08);
   height: 200px;
   display: flex;
   align-items: center;
