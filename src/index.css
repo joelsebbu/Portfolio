@@ -3,7 +3,7 @@
   --color-bg: #fffffe;
   --color-headline: #0f0e17;
   --color-paragraph: #2e2f3e;
-  --color-link: #e53170;
+  --color-link: #ff8906;
   --color-card-bg: #0f0e17;
   --color-card-headline: #fffffe;
   --color-card-paragraph: #a7a9be;
@@ -96,7 +96,7 @@ button:hover {
   background-color: var(--color-link);
   border-color: var(--color-link);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(229, 49, 112, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 137, 6, 0.3);
 }
 
 button:active {
