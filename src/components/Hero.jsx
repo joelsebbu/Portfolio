@@ -30,9 +30,9 @@ function Hero() {
         <div className="hero-image">
           <div className="profile-placeholder">
             <svg viewBox="0 0 200 200" fill="none">
-              <circle cx="100" cy="100" r="90" fill="var(--color-bg-secondary)" />
-              <circle cx="100" cy="80" r="30" fill="var(--color-primary)" />
-              <path d="M 50 150 Q 100 120 150 150" fill="var(--color-primary)" />
+              <circle cx="100" cy="100" r="90" fill="var(--color-card-bg)" />
+              <circle cx="100" cy="80" r="30" fill="var(--color-link)" />
+              <path d="M 50 150 Q 100 120 150 150" fill="var(--color-link)" />
             </svg>
           </div>
         </div>

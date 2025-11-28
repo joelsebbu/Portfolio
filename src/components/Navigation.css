@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 254, 0.95);
+  background-color: rgba(239, 240, 243, 0.95);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
@@ -12,13 +12,12 @@
 
 .navigation.scrolled {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid var(--color-bg-secondary);
+  border-bottom: 1px solid rgba(13, 13, 13, 0.1);
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+  width: 100%;
+  padding: 1rem clamp(2rem, 8vw, 8rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,11 +30,7 @@
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-text);
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-link);
 }
 
 .mobile-menu-toggle {
@@ -78,7 +73,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  background: var(--color-link);
   transition: width 0.3s ease;
 }
 

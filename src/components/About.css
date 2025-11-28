@@ -31,31 +31,28 @@
 }
 
 .stat-card {
-  background: linear-gradient(135deg, var(--color-bg-secondary), var(--color-bg));
+  background: var(--color-card-bg);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
-  border: 2px solid var(--color-bg-secondary);
+  border: 2px solid var(--color-card-bg);
   transition: all 0.3s ease;
 }
 
 .stat-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(61, 169, 252, 0.15);
-  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(255, 142, 60, 0.15);
+  border-color: var(--color-link);
 }
 
 .stat-card h3 {
   font-size: 2.5rem;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-card-headline);
   margin-bottom: 0.5rem;
 }
 
 .stat-card p {
-  color: var(--color-text-secondary);
+  color: var(--color-card-paragraph);
   font-size: 0.95rem;
   font-weight: 500;
 }
