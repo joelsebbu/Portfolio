@@ -1,11 +1,18 @@
 :root {
-  /* Happy Hues Palette 13 */
+  /* Custom Color Scheme */
   --color-bg: #fffffe;
-  --color-bg-secondary: #d8eefe;
-  --color-primary: #3da9fc;
-  --color-accent: #ef4565;
-  --color-text: #2b2c34;
-  --color-text-secondary: #90b4ce;
+  --color-headline: #0f0e17;
+  --color-paragraph: #2e2f3e;
+  --color-link: #e53170;
+  --color-card-bg: #0f0e17;
+  --color-card-headline: #fffffe;
+  --color-card-paragraph: #a7a9be;
+
+  /* Semantic color mappings */
+  --color-text: var(--color-headline);
+  --color-text-secondary: var(--color-paragraph);
+  --color-primary: var(--color-link);
+  --color-accent: var(--color-link);
 
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
@@ -63,13 +70,13 @@ p {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-link);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: var(--color-accent);
+  opacity: 0.8;
 }
 
 button {
@@ -86,10 +93,10 @@ button {
 }
 
 button:hover {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
+  background-color: var(--color-link);
+  border-color: var(--color-link);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(61, 169, 252, 0.3);
+  box-shadow: 0 4px 12px rgba(229, 49, 112, 0.3);
 }
 
 button:active {
@@ -97,13 +104,11 @@ button:active {
 }
 
 section {
-  padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 2rem);
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6rem) clamp(2rem, 8vw, 8rem);
+  width: 100%;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  width: 100%;
+  padding: 0 clamp(2rem, 8vw, 8rem);
 }
