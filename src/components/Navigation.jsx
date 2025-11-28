@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Navigation.css';
 
 function Navigation() {
@@ -8,6 +8,7 @@ function Navigation() {
     const savedTheme = localStorage.getItem('theme');
     return savedTheme === 'dark';
   });
+  const navRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,22 @@ function Navigation() {
     }
   }, [isDarkMode]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target) && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
@@ -41,7 +58,14 @@ function Navigation() {
   };
 
   return (
-    <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
+    <>
+      {isMobileMenuOpen && (
+        <div
+          className="mobile-menu-overlay"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+      <nav ref={navRef} className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('hero')}>
           <span className="logo-text">Portfolio</span>
@@ -91,6 +115,7 @@ function Navigation() {
         </ul>
       </div>
     </nav>
+    </>
   );
 }
 
