@@ -9,6 +9,17 @@ main {
   overflow-x: hidden;
 }
 
+/* Custom Text Selection */
+::selection {
+  background-color: #ff8c00;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #ff8c00;
+  color: #ffffff;
+}
+
 /* Click Spark Animation */
 .spark {
   position: fixed;
