@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import './Navigation.css';
+import portfolioData from '../data/portfolioData';
 
 function Navigation() {
+  const { navigation } = portfolioData;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -68,7 +70,7 @@ function Navigation() {
       <nav ref={navRef} className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('hero')}>
-          <span className="logo-text">Portfolio</span>
+          <span className="logo-text">{navigation.logo}</span>
         </div>
 
         <button
@@ -82,11 +84,11 @@ function Navigation() {
         </button>
 
         <ul className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <li><a onClick={() => scrollToSection('about')}>About</a></li>
-          <li><a onClick={() => scrollToSection('experience')}>Experience</a></li>
-          <li><a onClick={() => scrollToSection('skills')}>Skills</a></li>
-          <li><a onClick={() => scrollToSection('projects')}>Projects</a></li>
-          <li><a onClick={() => scrollToSection('resume')}>Resume</a></li>
+          {navigation.links.map((link, index) => (
+            <li key={index}>
+              <a onClick={() => scrollToSection(link.id)}>{link.name}</a>
+            </li>
+          ))}
           <li>
             <button
               className="theme-toggle"

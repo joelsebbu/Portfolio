@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -6,9 +7,14 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Resume from './components/Resume'
 import Footer from './components/Footer'
+import portfolioData from './data/portfolioData'
 import './App.css'
 
 function App() {
+  useEffect(() => {
+    document.title = portfolioData.personalInfo.pageTitle;
+  }, []);
+
   return (
     <>
       <Navigation />

@@ -1,29 +1,31 @@
 import './Hero.css';
+import portfolioData from '../data/portfolioData';
 
 function Hero() {
+  const { personalInfo, hero } = portfolioData;
+
   return (
     <section id="hero" className="hero">
       <div className="hero-content">
         <div className="hero-text">
           <h1 className="hero-title">
-            Hi, I'm <span className="gradient-text">Your Name</span>
+            {hero.greeting} <span className="gradient-text">{personalInfo.name}</span>
           </h1>
           <p className="hero-subtitle">
-            Full Stack Developer | UI/UX Enthusiast | Problem Solver
+            {personalInfo.title}
           </p>
           <p className="hero-description">
-            I craft elegant solutions to complex problems. Passionate about building
-            user-centric applications that make a difference.
+            {personalInfo.tagline}
           </p>
           <div className="hero-buttons">
             <button onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>
-              View My Work
+              {hero.cta.primary}
             </button>
             <button
               className="secondary-btn"
               onClick={() => document.getElementById('resume').scrollIntoView({ behavior: 'smooth' })}
             >
-              Download Resume
+              {hero.cta.secondary}
             </button>
           </div>
         </div>
