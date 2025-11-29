@@ -9,11 +9,11 @@ const portfolioData = {
   // PERSONAL INFORMATION
   // ===================================
   personalInfo: {
-    name: "Your Name",
+    name: "Joel J Sebastian",
     title: "Full Stack Developer | UI/UX Enthusiast | Problem Solver",
     tagline: "I craft elegant solutions to complex problems. Passionate about building user-centric applications that make a difference.",
     // For page title and meta tags
-    pageTitle: "Your Name - Portfolio"
+    pageTitle: "joelsebbu - me"
   },
 
   // ===================================
@@ -38,17 +38,17 @@ const portfolioData = {
     ],
     stats: [
       {
-        value: "5+",
+        value: "3+",
         label: "Years Experience"
       },
       {
-        value: "50+",
+        value: "5",
         label: "Projects Completed"
       },
-      {
-        value: "30+",
-        label: "Happy Clients"
-      }
+     // {
+      //   value: "30+",
+      //   label: "Happy Clients"
+      // }
     ]
   },
 
