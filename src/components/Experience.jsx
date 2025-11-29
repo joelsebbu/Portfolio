@@ -1,5 +1,36 @@
 import './Experience.css';
 
+function ExperienceCard({ exp }) {
+  const handleMouseMove = (e) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    card.style.setProperty('--mouse-x', `${x}px`);
+    card.style.setProperty('--mouse-y', `${y}px`);
+  };
+
+  return (
+    <div
+      className="timeline-content"
+      onMouseMove={handleMouseMove}
+    >
+      <div className="timeline-header">
+        <h3>{exp.title}</h3>
+        <span className="timeline-period">{exp.period}</span>
+      </div>
+      <h4 className="company-name">{exp.company}</h4>
+      <p className="timeline-description">{exp.description}</p>
+      <ul className="timeline-highlights">
+        {exp.highlights.map((highlight, idx) => (
+          <li key={idx}>{highlight}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function Experience() {
   const experiences = [
     {
@@ -44,19 +75,7 @@ function Experience() {
         {experiences.map((exp, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-marker"></div>
-            <div className="timeline-content">
-              <div className="timeline-header">
-                <h3>{exp.title}</h3>
-                <span className="timeline-period">{exp.period}</span>
-              </div>
-              <h4 className="company-name">{exp.company}</h4>
-              <p className="timeline-description">{exp.description}</p>
-              <ul className="timeline-highlights">
-                {exp.highlights.map((highlight, idx) => (
-                  <li key={idx}>{highlight}</li>
-                ))}
-              </ul>
-            </div>
+            <ExperienceCard exp={exp} />
           </div>
         ))}
       </div>
