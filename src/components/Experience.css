@@ -46,26 +46,28 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--color-card-bg);
+  border: 1px solid transparent;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .timeline-content::before {
   content: '';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
+  inset: -2px;
   border-radius: 12px;
+  padding: 2px;
   background: radial-gradient(
-    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(255, 142, 60, 0.4),
-    transparent 40%
+    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 142, 60, 0.8),
+    transparent 60%
   );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: -1;
   pointer-events: none;
 }
 
@@ -76,7 +78,6 @@
 .timeline-content:hover {
   transform: translateX(10px);
   box-shadow: 0 8px 30px rgba(255, 142, 60, 0.15);
-  border-color: var(--color-link);
 }
 
 .timeline-header {
