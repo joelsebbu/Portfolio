@@ -13,7 +13,11 @@ const portfolioData = {
     title: "Full Stack Developer | UI/UX Enthusiast | Problem Solver",
     tagline: "I craft elegant solutions to complex problems. Passionate about building user-centric applications that make a difference.",
     // For page title and meta tags
-    pageTitle: "joelsebbu - me"
+    pageTitle: "joelsebbu - me",
+    // Profile image - place your image in /public folder and reference it here
+    // Example: "/profile.jpg" or "/images/profile.png"
+    // Leave as null to use the default placeholder
+    profileImage: null
   },
 
   // ===================================
