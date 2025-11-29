@@ -46,24 +46,33 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 2px solid transparent;
   transition: all 0.3s ease;
-  z-index: 1;
+  overflow: visible;
 }
 
 .timeline-content::before {
   content: '';
   position: absolute;
-  inset: -3px;
+  inset: -2px;
   border-radius: 12px;
   background: radial-gradient(
-    300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(255, 142, 60, 1),
-    rgba(255, 142, 60, 0.4) 30%,
-    transparent 50%
+    200px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 142, 60, 0.9),
+    rgba(255, 142, 60, 0.4) 40%,
+    transparent 70%
   );
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.timeline-content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: var(--color-card-bg);
   z-index: -1;
   pointer-events: none;
 }
