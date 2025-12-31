@@ -14,10 +14,14 @@ function App() {
 
   useEffect(() => {
     const handleClick = (e) => {
+      // Check if click is within the resume section
+      const isInResume = e.target.closest('.resume') !== null
+
       const spark = {
         id: Date.now() + Math.random(),
         x: e.clientX,
-        y: e.clientY
+        y: e.clientY,
+        type: isInResume ? 'resume-spark' : 'spark'
       }
 
       setSparks(prev => [...prev, spark])
@@ -52,7 +56,7 @@ function App() {
       {sparks.map(spark => (
         <div
           key={spark.id}
-          className="spark"
+          className={spark.type}
           style={{
             left: `${spark.x}px`,
             top: `${spark.y}px`

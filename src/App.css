@@ -21,7 +21,8 @@ main {
 }
 
 /* Click Spark Animation */
-.spark {
+.spark,
+.resume-spark {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
@@ -75,4 +76,25 @@ main {
     transform: translate(-50%, -50%) scale(3);
     opacity: 0;
   }
+}
+
+/* Theme-aware spark colors for Resume Section */
+/* Light theme: white sparkles in resume */
+.resume-spark .spark-particle {
+  background: radial-gradient(circle, #ffffff, #f0f0f0);
+  box-shadow: 0 0 6px #ffffff, 0 0 12px #f0f0f0;
+}
+
+.resume-spark .spark-particle::before {
+  background: radial-gradient(circle, #ffffff, transparent);
+}
+
+/* Dark theme: black sparkles in resume */
+[data-theme='dark'] .resume-spark .spark-particle {
+  background: radial-gradient(circle, #000000, #1a1a1a);
+  box-shadow: 0 0 6px #000000, 0 0 12px #1a1a1a;
+}
+
+[data-theme='dark'] .resume-spark .spark-particle::before {
+  background: radial-gradient(circle, #000000, transparent);
 }
