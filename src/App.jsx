@@ -14,10 +14,14 @@ function App() {
 
   useEffect(() => {
     const handleClick = (e) => {
+      // Check if click is within the resume section
+      const isInResume = e.target.closest('.resume') !== null
+
       const spark = {
         id: Date.now() + Math.random(),
         x: e.clientX,
-        y: e.clientY
+        y: e.clientY,
+        type: isInResume ? 'flicker' : 'spark'
       }
 
       setSparks(prev => [...prev, spark])
@@ -52,15 +56,19 @@ function App() {
       {sparks.map(spark => (
         <div
           key={spark.id}
-          className="spark"
+          className={spark.type === 'flicker' ? 'flicker' : 'spark'}
           style={{
             left: `${spark.x}px`,
             top: `${spark.y}px`
           }}
         >
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="spark-particle" style={{ '--i': i }} />
-          ))}
+          {spark.type === 'flicker' ? (
+            <div className="flicker-circle" />
+          ) : (
+            [...Array(8)].map((_, i) => (
+              <div key={i} className="spark-particle" style={{ '--i': i }} />
+            ))
+          )}
         </div>
       ))}
     </>
