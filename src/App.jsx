@@ -7,11 +7,18 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Resume from './components/Resume'
 import Footer from './components/Footer'
+import portfolioData from './data/portfolioData'
 import './App.css'
 
 function App() {
   const [sparks, setSparks] = useState([])
 
+  // Set page title from centralized data
+  useEffect(() => {
+    document.title = portfolioData.personalInfo.pageTitle;
+  }, []);
+
+  // Handle spark animations
   useEffect(() => {
     const handleClick = (e) => {
       // Check if click is within the resume section

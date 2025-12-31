@@ -62,7 +62,8 @@
   animation: fadeIn 1s ease-out;
 }
 
-.profile-placeholder {
+.profile-placeholder,
+.profile-photo {
   width: 100%;
   max-width: 400px;
   aspect-ratio: 1;
@@ -72,13 +73,19 @@
   transition: transform 0.3s ease;
 }
 
-.profile-placeholder:hover {
+.profile-placeholder:hover,
+.profile-photo:hover {
   transform: scale(1.05);
 }
 
 .profile-placeholder svg {
   width: 100%;
   height: 100%;
+}
+
+.profile-photo {
+  object-fit: cover;
+  object-position: center;
 }
 
 @keyframes fadeInUp {
@@ -117,7 +124,8 @@
     justify-content: center;
   }
 
-  .profile-placeholder {
+  .profile-placeholder,
+  .profile-photo {
     max-width: 300px;
   }
 }

@@ -1,38 +1,8 @@
 import './Skills.css';
+import portfolioData from '../data/portfolioData';
 
 function Skills() {
-  const skillCategories = [
-    {
-      category: 'Frontend',
-      skills: [
-        { name: 'React', level: 90 },
-        { name: 'JavaScript/TypeScript', level: 85 },
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'Next.js', level: 80 },
-        { name: 'Tailwind CSS', level: 85 }
-      ]
-    },
-    {
-      category: 'Backend',
-      skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express', level: 80 },
-        { name: 'MongoDB', level: 75 },
-        { name: 'PostgreSQL', level: 80 },
-        { name: 'REST APIs', level: 90 }
-      ]
-    },
-    {
-      category: 'Tools & Others',
-      skills: [
-        { name: 'Git', level: 90 },
-        { name: 'Docker', level: 75 },
-        { name: 'AWS', level: 70 },
-        { name: 'CI/CD', level: 80 },
-        { name: 'Agile/Scrum', level: 85 }
-      ]
-    }
-  ];
+  const skillCategories = portfolioData.skills;
 
   return (
     <section id="skills" className="skills">

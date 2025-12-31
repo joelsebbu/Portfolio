@@ -1,65 +1,17 @@
 import './Projects.css';
+import portfolioData from '../data/portfolioData';
 
 function Projects() {
-  const projects = [
-    {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform with cart functionality, payment integration, and admin dashboard. Built with React, Node.js, and MongoDB.',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: '🛒',
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Task Management App',
-      description: 'Collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.',
-      tags: ['React', 'Firebase', 'Material-UI'],
-      image: '📋',
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'Real-time weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.',
-      tags: ['React', 'API Integration', 'Charts'],
-      image: '🌤️',
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Social Media Analytics',
-      description: 'Analytics platform for social media metrics with data visualization, reporting features, and insights generation.',
-      tags: ['Next.js', 'PostgreSQL', 'D3.js'],
-      image: '📊',
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Portfolio Generator',
-      description: 'No-code portfolio builder allowing users to create beautiful portfolios with customizable themes and templates.',
-      tags: ['React', 'Express', 'AWS'],
-      image: '🎨',
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Chat Application',
-      description: 'Real-time chat application with private messaging, group chats, file sharing, and message encryption.',
-      tags: ['React', 'Socket.io', 'Node.js'],
-      image: '💬',
-      github: '#',
-      live: '#'
-    }
-  ];
+  const { projects } = portfolioData;
 
   return (
     <section id="projects" className="projects">
-      <h2>Featured Projects</h2>
+      <h2>{projects.sectionTitle}</h2>
       <p className="projects-subtitle">
-        Here are some of my recent projects that showcase my skills and experience
+        {projects.sectionSubtitle}
       </p>
       <div className="projects-grid">
-        {projects.map((project, index) => (
+        {projects.items.map((project, index) => (
           <div key={index} className="project-card">
             <div className="project-image">
               <span className="project-emoji">{project.image}</span>
