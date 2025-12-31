@@ -21,7 +21,7 @@ function App() {
         id: Date.now() + Math.random(),
         x: e.clientX,
         y: e.clientY,
-        type: isInResume ? 'flicker' : 'spark'
+        type: isInResume ? 'resume-spark' : 'spark'
       }
 
       setSparks(prev => [...prev, spark])
@@ -56,19 +56,15 @@ function App() {
       {sparks.map(spark => (
         <div
           key={spark.id}
-          className={spark.type === 'flicker' ? 'flicker' : 'spark'}
+          className={spark.type}
           style={{
             left: `${spark.x}px`,
             top: `${spark.y}px`
           }}
         >
-          {spark.type === 'flicker' ? (
-            <div className="flicker-circle" />
-          ) : (
-            [...Array(8)].map((_, i) => (
-              <div key={i} className="spark-particle" style={{ '--i': i }} />
-            ))
-          )}
+          {[...Array(8)].map((_, i) => (
+            <div key={i} className="spark-particle" style={{ '--i': i }} />
+          ))}
         </div>
       ))}
     </>
