@@ -10,8 +10,8 @@ const portfolioData = {
   // ===================================
   personalInfo: {
     name: "Joel J Sebastian",
-    title: "Full Stack Developer | UI/UX Enthusiast | Problem Solver",
-    tagline: "I craft elegant solutions to complex problems. Passionate about building user-centric applications that make a difference.",
+    title: "Full Stack Developer | Aspiring Technical Architect | Problem Solver",
+    tagline: "I craft elegant solutions to complex problems. Passionate about building user-centric applications and systems that make a difference.",
     // For page title and meta tags
     pageTitle: "joelsebbu - me",
     // Profile image - place your image in /public folder and reference it here
@@ -46,7 +46,7 @@ const portfolioData = {
         label: "Years Experience"
       },
       {
-        value: "5",
+        value: "3",
         label: "Projects Completed"
       },
      // {
@@ -63,21 +63,18 @@ const portfolioData = {
     {
       category: 'Frontend',
       skills: [
-        { name: 'React', level: 90 },
-        { name: 'JavaScript/TypeScript', level: 85 },
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'Next.js', level: 80 },
-        { name: 'Tailwind CSS', level: 85 }
+        { name: 'React.js', level: 92 },
+        { name: 'TypeScript', level: 85 },
+        { name: 'Three.js', level: 80 },
+        { name: 'HTML/CSS', level: 90 }
       ]
     },
     {
       category: 'Backend',
       skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express', level: 80 },
-        { name: 'MongoDB', level: 75 },
-        { name: 'PostgreSQL', level: 80 },
-        { name: 'REST APIs', level: 90 }
+        { name: 'Python', level: 88 },
+        { name: 'FastAPI', level: 82 },
+        { name: 'PostgreSQL', level: 80 }
       ]
     },
     {
@@ -97,36 +94,39 @@ const portfolioData = {
   // ===================================
   experience: [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Company Inc.',
-      period: '2022 - Present',
-      description: 'Leading development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and driving technical decisions.',
+      title: 'Senior Software Engineer',
+      company: 'InApp',
+      period: 'Jan 2025 – Present',
+      description:
+        'Full-time · Thiruvananthapuram, Kerala, India. Leading AI- and Python-focused feature work with ownership from design through delivery.',
       highlights: [
-        'Architected and deployed microservices handling 1M+ requests daily',
-        'Reduced application load time by 40% through optimization',
-        'Led team of 5 developers in agile environment'
+        'Design and deliver intelligent product capabilities using AI tooling and Python',
+        'Own technical direction for features alongside architecture and code quality goals',
+        'Collaborate cross-functionally to ship reliable, maintainable solutions'
       ]
     },
     {
-      title: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd.',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client-facing applications. Collaborated with design and product teams to deliver high-quality solutions.',
+      title: 'Software Engineer',
+      company: 'InApp',
+      period: 'Jul 2023 – Dec 2024',
+      description:
+        'Full-time, on-site · Thiruvananthapuram, Kerala, India. Built and maintained production features across Python services and React.js applications.',
       highlights: [
-        'Built responsive web applications serving 100K+ users',
-        'Implemented CI/CD pipelines reducing deployment time by 60%',
-        'Integrated third-party APIs and payment systems'
+        'Implemented full-stack features with Python backends and React.js frontends',
+        'Worked on-site with product and engineering peers in an agile delivery rhythm',
+        'Contributed to APIs, integrations, and performance-minded UI work'
       ]
     },
     {
-      title: 'Junior Developer',
-      company: 'StartUp Ventures',
-      period: '2019 - 2020',
-      description: 'Contributed to frontend and backend development. Learned industry best practices and modern development workflows.',
+      title: 'Associate Software Engineer',
+      company: 'InApp',
+      period: 'Jul 2022 – Jul 2023',
+      description:
+        'Full-time · Thiruvananthapuram, Kerala, India. Started the InApp journey with a strong emphasis on React.js and growing into broader stack ownership.',
       highlights: [
-        'Developed reusable UI components in React',
-        'Participated in code reviews and testing',
-        'Collaborated with cross-functional teams'
+        'Developed React.js components and screens for customer-facing products',
+        'Learned production practices through code reviews, testing, and iteration',
+        'Supported feature delivery in collaboration with senior engineers'
       ]
     }
   ],
@@ -139,52 +139,28 @@ const portfolioData = {
     sectionSubtitle: "Here are some of my recent projects that showcase my skills and experience",
     items: [
       {
-        title: 'E-Commerce Platform',
-        description: 'A full-featured e-commerce platform with cart functionality, payment integration, and admin dashboard. Built with React, Node.js, and MongoDB.',
-        tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-        image: '🛒',
-        github: '#',
-        live: '#'
+        title: 'remind-mcp',
+        description:
+          'Lets AI assistants manage your Linux calendar reminders in plain language—built on the remind tool so you skip the tricky syntax.',
+        tags: ['Python', 'Linux'],
+        image: '📅',
+        github: 'https://github.com/joelsebbu/remind-mcp'
       },
       {
-        title: 'Task Management App',
-        description: 'Collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.',
-        tags: ['React', 'Firebase', 'Material-UI'],
-        image: '📋',
-        github: '#',
-        live: '#'
+        title: 'StackMark',
+        description:
+          'A personal bookmark app: save links from social feeds, YouTube, or the open web, then search what you saved in plain language.',
+        tags: ['Python', 'AI', 'Web'],
+        image: '🔖',
+        github: 'https://github.com/joelsebbu/stackMark'
       },
       {
-        title: 'Weather Dashboard',
-        description: 'Real-time weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.',
-        tags: ['React', 'API Integration', 'Charts'],
-        image: '🌤️',
-        github: '#',
-        live: '#'
-      },
-      {
-        title: 'Social Media Analytics',
-        description: 'Analytics platform for social media metrics with data visualization, reporting features, and insights generation.',
-        tags: ['Next.js', 'PostgreSQL', 'D3.js'],
-        image: '📊',
-        github: '#',
-        live: '#'
-      },
-      {
-        title: 'Portfolio Generator',
-        description: 'No-code portfolio builder allowing users to create beautiful portfolios with customizable themes and templates.',
-        tags: ['React', 'Express', 'AWS'],
-        image: '🎨',
-        github: '#',
-        live: '#'
-      },
-      {
-        title: 'Chat Application',
-        description: 'Real-time chat application with private messaging, group chats, file sharing, and message encryption.',
-        tags: ['React', 'Socket.io', 'Node.js'],
-        image: '💬',
-        github: '#',
-        live: '#'
+        title: 'Portfolio',
+        description:
+          'My personal site—who I am, what I\'ve worked on, and how to reach me.',
+        tags: ['React', 'Web'],
+        image: '💼',
+        github: 'https://github.com/joelsebbu/Portfolio'
       }
     ]
   },
@@ -193,7 +169,7 @@ const portfolioData = {
   // CONTACT & RESUME
   // ===================================
   contact: {
-    email: "your.email@example.com",
+    email: "joel18sebastian@gmail.com",
     resumeSection: {
       title: "Get My Resume",
       description: "Interested in working together? Download my resume to learn more about my experience, skills, and achievements.",
@@ -210,16 +186,16 @@ const portfolioData = {
   // ===================================
   social: {
     github: {
-      url: "https://github.com/yourusername",
-      display: "github.com/yourusername"
+      url: "https://github.com/joelsebbu",
+      display: "github.com/joelsebbu"
     },
     linkedin: {
-      url: "https://linkedin.com/in/yourprofile",
-      display: "linkedin.com/in/yourprofile"
+      url: "https://www.linkedin.com/in/joel-j-sebastian/",
+      display: "linkedin.com/in/joel-j-sebastian"
     },
     twitter: {
-      url: "https://x.com/yourusername",
-      display: "x.com/yourusername"
+      url: "https://x.com/joelsebbu",
+      display: "x.com/joelsebbu"
     }
   },
 
@@ -243,7 +219,7 @@ const portfolioData = {
   footer: {
     logo: "Portfolio",
     tagline: "Building the future, one line of code at a time.",
-    copyright: "Your Name",
+    copyright: "Joel J Sebastian",
     builtWith: "Built with React & ❤️",
     sections: {
       quickLinks: "Quick Links",
