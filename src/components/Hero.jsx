@@ -1,8 +1,24 @@
+import { useState, useEffect } from 'react';
 import './Hero.css';
 import portfolioData from '../data/portfolioData';
 
 function Hero() {
   const { personalInfo, hero } = portfolioData;
+  const [isDark, setIsDark] = useState(
+    () => document.documentElement.getAttribute('data-theme') === 'dark'
+  );
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.getAttribute('data-theme') === 'dark');
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    return () => observer.disconnect();
+  }, []);
+
+  const profileSrc = isDark && personalInfo.darkProfileImage
+    ? personalInfo.darkProfileImage
+    : personalInfo.profileImage;
 
   return (
     <section id="hero" className="hero">
@@ -30,9 +46,9 @@ function Hero() {
           </div>
         </div>
         <div className="hero-image">
-          {personalInfo.profileImage ? (
+          {profileSrc ? (
             <img
-              src={personalInfo.profileImage}
+              src={profileSrc}
               alt={`${personalInfo.name} - Profile`}
               className="profile-photo"
             />

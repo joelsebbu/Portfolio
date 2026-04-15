@@ -17,7 +17,9 @@ const portfolioData = {
     // Profile image - place your image in /public folder and reference it here
     // Example: "/profile.jpg" or "/images/profile.png"
     // Leave as null to use the default placeholder
-    profileImage: "/DSC_0012.jpeg"
+    profileImage: "/DSC_0012.jpeg",
+    // Optional dark theme profile image - shown when dark mode is active
+    darkProfileImage: "/night-dp.png"
   },
 
   // ===================================
